@@ -3,7 +3,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 
-#include "Entity.hpp"
+#include "../include/Entity.hpp"
 
 class RenderWindow
 {

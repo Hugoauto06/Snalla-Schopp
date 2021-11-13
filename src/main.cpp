@@ -4,9 +4,9 @@
 #include <vector>
 #include <string>
 
-#include "RenderWindow.hpp"
-#include "Entity.hpp"
-#include "Player.hpp"
+#include "../include/RenderWindow.hpp"
+#include "../include/Entity.hpp"
+#include "../include/Player.hpp"
 
 bool gameRunning = true;
 
@@ -45,7 +45,6 @@ int main(int argc, char *args[])
 	for(int i = 0; i < 40; i+=1)
 	{
 		Entity ground(Vector2f(i * 32, 688), grassTexture);
-		ground.setPos(x , );
 
 		entities.push_back(ground);
 	}

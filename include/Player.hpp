@@ -16,6 +16,7 @@ public:
 	SDL_Rect getCurrentFrame();
 private:
 	Vector2f pos;
+	Vector2f pos2;
 	SDL_Texture* tex;
 	SDL_Rect getCurrentFrame;
 };

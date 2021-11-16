@@ -52,7 +52,7 @@ int main(int argc, char *args[])
 
 		if (state[SDL_SCANCODE_D])
 		{
-			player.setPos(128, 96); // SetPos no esta funcionando con el jugador
+			player.setX(128);
 		}
 
 		/* Window Events (closing the window) */
@@ -71,6 +71,8 @@ int main(int argc, char *args[])
 		{
 			window.render(ent);
 		}
+
+		player.Update();
 
 		window.display();
 	}

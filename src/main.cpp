@@ -26,21 +26,15 @@ void init()
 	playerTexture = window.loadTexture("res/img/player.png");
 }
 
-void inputHandler()
-{
-	const Uint8 *state = SDL_GetKeyboardState(NULL);
-
-	if (state[SDL_SCANCODE_F11])
-	{
-		
-	}
-}
 
 int main(int argc, char *args[])
 {
 	init();
 
-	//Player player(Vector2f(32, 255), playerTexture);
+	
+	Player player(Vector2f(32, 64), playerTexture);
+	entities.push_back(player);
+
 
 	for(int i = 0; i < 40; i+=1)
 	{
@@ -54,7 +48,12 @@ int main(int argc, char *args[])
 
 	while(gameRunning)
 	{
-		inputHandler();
+		const Uint8 *state = SDL_GetKeyboardState(NULL);
+
+		if (state[SDL_SCANCODE_D])
+		{
+			player.setPos(128, 96); // SetPos no esta funcionando con el jugador
+		}
 
 		/* Window Events (closing the window) */
 		while(SDL_PollEvent(&event))

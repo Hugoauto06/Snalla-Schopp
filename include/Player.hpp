@@ -1,23 +1,21 @@
-/*
 #pragma once
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
-#include <iostream>
 
-#include "Math.hpp"
+#include "../include/Math.hpp"
+#include "../include/Entity.hpp"
 
-class Player
+class Player : public Entity
 {
 public:
 	Player(Vector2f p_pos, SDL_Texture* p_tex);
-	void update();
-
-	SDL_Texture* getTex();
-	SDL_Rect getCurrentFrame();
 private:
-	Vector2f pos;
-	Vector2f pos2;
-	SDL_Texture* tex;
-	SDL_Rect getCurrentFrame;
 };
+
+/*
+	Player.hpp cuenta con las mismas funciones que Entity.hpp,
+	este hereda todo en la class de Entity.hpp, asi que setPos,
+	getPos y otras deberian funcionar.
+
+
 */

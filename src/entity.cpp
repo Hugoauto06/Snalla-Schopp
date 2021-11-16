@@ -12,11 +12,6 @@ Entity::Entity(Vector2f p_pos, SDL_Texture* p_tex)
 	currentFrame.h = 32;
 }
 
-void Entity::setPos(float xx, float yy)
-{
-	pos = Vector2f(xx, yy);
-}
-
 SDL_Texture* Entity::getTex()
 {
 	return tex;

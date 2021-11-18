@@ -4,6 +4,7 @@
 
 #include "../include/Player.hpp"
 #include "../include/Entity.hpp"
+#include "../include/Math.hpp"
 
 Player::Player(Vector2f p_pos, SDL_Texture* p_tex)
 :Entity { p_pos, p_tex }
@@ -14,6 +15,8 @@ Player::Player(Vector2f p_pos, SDL_Texture* p_tex)
 void Player::Update()
 {
 	setPos(x, y);
+	std::cout << x << std::endl;
+
 	/*
 		No esta funcionando por algun motivo
 	*/

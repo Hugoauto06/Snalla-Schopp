@@ -18,7 +18,7 @@ public:
 
 	void setPos(float s_x, float s_y)
 	{
-		pos = Vector2f(s_x, s_x);
+		pos = Vector2f(s_x, s_y);
 	}
 private:
 	Vector2f pos;

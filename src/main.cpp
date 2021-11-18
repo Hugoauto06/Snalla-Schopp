@@ -52,7 +52,7 @@ int main(int argc, char *args[])
 
 		if (state[SDL_SCANCODE_D])
 		{
-			player.setX(128);
+			player.setX(25.0f);
 		}
 
 		/* Window Events (closing the window) */

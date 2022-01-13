@@ -1,4 +1,4 @@
-#include "../include/Math.hpp"
+#include "include/Math.hpp"
 
 float MathH::clamp(float p_value, float p_min, float p_max)
 {

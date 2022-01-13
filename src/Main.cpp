@@ -4,9 +4,9 @@
 #include <vector>
 #include <string>
 
-#include "../include/RenderWindow.hpp"
-#include "../include/Entity.hpp"
-#include "../include/Player.hpp"
+#include "include/RenderWindow.hpp"
+#include "include/Entity.hpp"
+#include "include/Player.hpp"
 
 bool gameRunning = true;
 

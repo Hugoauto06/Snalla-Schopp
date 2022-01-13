@@ -1,7 +1,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 
-#include "../include/Entity.hpp"
+#include "include/Entity.hpp"
 
 Entity::Entity(Vector2f p_pos, SDL_Texture* p_tex)
 :pos(p_pos), tex(p_tex)

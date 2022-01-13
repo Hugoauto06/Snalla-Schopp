@@ -2,8 +2,8 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 
-#include "../include/Math.hpp"
-#include "../include/Entity.hpp"
+#include "Math.hpp"
+#include "Entity.hpp"
 
 class Player : public Entity
 {

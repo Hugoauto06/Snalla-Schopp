@@ -2,8 +2,8 @@
 #include <SDL2/SDL_image.h>
 #include <iostream>
 
-#include "include/RenderWindow.hpp"
-#include "include/Entity.hpp"
+#include "RenderWindow.hpp"
+#include "Entity.hpp"
 
 RenderWindow::RenderWindow(const char* p_title, int p_w, int p_h)
 :window(NULL), renderer(NULL)
@@ -25,6 +25,8 @@ SDL_Texture* RenderWindow::loadTexture(const char* p_filePath)
 
 	if (texture == NULL)
 	{
+		std::cout << texture << std::endl;
+		std::cout << p_filePath << std::endl;
 		std::cout << "Failed to load texture" << SDL_GetError << std::endl;
 	}
 

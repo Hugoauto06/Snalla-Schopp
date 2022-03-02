@@ -49,8 +49,8 @@ DLLS_PATH=/usr/x86_64-w64-mingw32/bin
 BINARIES-WIN=game.exe
 
 OBJS-WIN=$(SOURCES:%.cpp=$(OBJ_PATH)/$(WIN_PLATFORM)/%.o)
-LIBRARIES=SDL2 SDL2_image zlib libjpeg libpng libtiff libwebp
-DLLS-WIN=$(LIBRARIES:%=$(OUT_PATH)/$(WIN_PLATFORM)/%)
+LIBS-WIN=SDL2 SDL2_image zlib libpng #libjpeg libtiff libwebp
+DLLS-WIN=$(LIBS-WIN:%=$(OUT_PATH)/$(WIN_PLATFORM)/%)
 
 CC-WIN=x86_64-w64-mingw32-g++
 WLIBS=-lmingw32 -lSDL2main
@@ -66,7 +66,6 @@ ${OBJ_PATH}/${WIN_PLATFORM}/%.o: %.cpp
 
 ${OUT_PATH}/${WIN_PLATFORM}/%: ${DLLS_PATH}/%*
 	@cp $< ${OUT_PATH}/${WIN_PLATFORM}
-	@echo Copied $($<:%/=$%)
 
 ${OUT_PATH}/${WIN_PLATFORM}:
 	mkdir -p ${OUT_PATH}/${WIN_PLATFORM}

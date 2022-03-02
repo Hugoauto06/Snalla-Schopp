@@ -25,9 +25,7 @@ SDL_Texture* RenderWindow::loadTexture(const char* p_filePath)
 
 	if (texture == NULL)
 	{
-		std::cout << texture << std::endl;
-		std::cout << p_filePath << std::endl;
-		std::cout << "Failed to load texture" << SDL_GetError << std::endl;
+		std::cout << "Failed to load texture \nCheck if image format dll and zlib dll exists in directory \nError: " << SDL_GetError << std::endl;
 	}
 
 	return texture;
